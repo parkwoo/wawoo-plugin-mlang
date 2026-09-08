@@ -4,11 +4,17 @@ Multi-language content support for wawoo-cms: language-prefixed URLs with per-la
 
 ## Install
 
-Requires the wawoo-cms core:
+Get the plugin:
+
+```bash
+git clone https://github.com/parkwoo/wawoo-plugin-mlang
+```
+
+Then link it from a wawoo-cms checkout:
 
 ```
 cd /path/to/wawoo-cms
-php bin/wawoo plugin:link /home/git/wawoo-plugin-mlang
+php bin/wawoo plugin:link /path/to/wawoo-plugin-mlang
 ```
 
 Enable via `config.local.php` `ENABLED_PLUGINS` or the admin Plugins page.
@@ -19,7 +25,7 @@ Coverage lives in wawoo-cms tests/Unit/PostsLangTest.php + PagesLangTest.php and
 
 ```
 cd /path/to/wawoo-cms
-php bin/wawoo plugin:link /home/git/wawoo-plugin-mlang
+php bin/wawoo plugin:link /path/to/wawoo-plugin-mlang
 phpunit tests/Unit/PostsLangTest.php tests/Unit/PagesLangTest.php
 ```
 
