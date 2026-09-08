@@ -23,8 +23,14 @@ php bin/wawoo plugin:link /home/git/wawoo-plugin-mlang
 phpunit tests/Unit/PostsLangTest.php tests/Unit/PagesLangTest.php
 ```
 
-## Requirements
+## CI
 
-`wawoo-cms >= 1.0.0`, PHP 8.3, no runtime deps.
+GitHub Actions PHP 8.2/8.3: clone core, `plugin:link --copy`, then run core's `phpunit tests/Unit/PostsLangTest.php tests/Unit/PagesLangTest.php`.
 
-Content multi-language also needs the core language-suffix support in Posts/Pages (already in core >=1.0.0); the i18n UI plugin is optional for translated chrome.
+## Dependencies
+
+Depends on core language-suffix resolution in Posts/Pages (core >= 1.0.0). Optional companion: wawoo-plugin-i18n for translated UI chrome. Content translations are per-bundle files; no other plugin required.
+
+## Release
+
+Manifest requires `core >=1.0.0`; repo tagged `v1.0.0`; bump manifest + tag together.
